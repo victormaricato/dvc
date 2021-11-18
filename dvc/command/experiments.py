@@ -1100,14 +1100,14 @@ def add_parser(subparsers, parent_parser):
         "-o",
         "--out",
         default=None,
-        help="Destination path to save the parallel coordinates plot to",
+        help="Destination path to save the HTML to",
         metavar="<path>",
     ).complete = completion.DIR
     experiments_show_parser.add_argument(
         "--open",
         action="store_true",
         default=False,
-        help="Open the parallel coordinates plot directly in the browser.",
+        help="Open the HTML directly in the browser.",
     )
     experiments_show_parser.set_defaults(func=CmdExperimentsShow)
 
