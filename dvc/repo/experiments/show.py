@@ -136,13 +136,14 @@ def show(
             all_branches=all_branches,
             all_tags=all_tags,
             all_commits=all_commits,
-            sha_only=True,
+            sha_only=False,
         )
     )
 
     running = repo.experiments.get_running_exps()
 
     for rev in revs:
+        rev = rev.split(", ")[0]
         res[rev]["baseline"] = _collect_experiment_commit(
             repo,
             rev,
